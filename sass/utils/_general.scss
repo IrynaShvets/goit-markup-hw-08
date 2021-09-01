@@ -1,0 +1,84 @@
+html {
+  box-sizing: border-box;
+}
+
+* * ::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $primary-text-color;
+  font-family: $primary-font-family;
+  background: $primary-color;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section {
+  @include sectionPadding(94px, 94px);
+  @include flex(flex, center, center);
+  flex-direction: column;
+  height: 100%;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 1px solid red;
+}
+
+.button {
+  @include font(inherit, 16px, 700, 1.88, 0.06em, $button-color);
+  display: inline-block;
+  align-items: center;
+  cursor: pointer;
+  background-color: $selection-color;
+  border-radius: $primary-border-radius;
+  border: 1px solid transparent;
+  @include transition(
+    color,
+    background-color,
+    box-shadow,
+    250ms,
+    $transition-cubic-bezier
+  );
+}
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.section__title--visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

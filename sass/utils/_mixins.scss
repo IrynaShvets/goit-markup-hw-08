@@ -1,0 +1,29 @@
+@mixin bordered($weight, $color) {
+  border: $weight solid $color;
+}
+
+@mixin font($ff, $fs, $fw, $lh, $ls, $fc) {
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+  color: $fc;
+}
+
+@mixin sectionPadding($t, $b) {
+  padding-top: $t;
+  padding-bottom: $b;
+}
+
+@mixin flex($display, $ai, $jc) {
+  display: $display;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin transition($one, $two, $three, $time, $function) {
+  transition-property: $one, $two, $three;
+  transition-duration: $time;
+  transition-timing-function: $function;
+}

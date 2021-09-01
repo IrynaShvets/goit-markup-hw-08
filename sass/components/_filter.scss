@@ -1,0 +1,117 @@
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-buttons .filter-buttons__item + .filter-buttons__item {
+  margin-left: 8px;
+}
+
+.filter-buttons__btn {
+  @include font(inherit, 16px, 500, 1.63, 0.03em, inherit);
+  @include bordered(0, transparent);
+  padding: 6px 22px;
+  cursor: pointer;
+  background-color: $section-background;
+  border-radius: $primary-border-radius;
+  @include transition(
+    color,
+    background-color,
+    box-shadow,
+    250ms,
+    $transition-cubic-bezier
+  );
+
+  &--current,
+  &:hover,
+  &:focus {
+    color: $primary-color;
+    background-color: $selection-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: $primary-border-radius;
+  }
+}
+
+.filter-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.filter-cards__list {
+  width: 370px;
+  margin-top: 30px;
+  margin-left: 30px;
+
+  &:nth-child(-n + 3) {
+    margin-top: 0;
+  }
+}
+
+.filter-cards__link {
+  display: block;
+  text-decoration: none;
+  @include transition(box-shadow, null, null, 250ms, $transition-cubic-bezier);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .filter-overlay__text,
+  &:focus .filter-overlay__text {
+    transform: translateY(-100%);
+  }
+}
+
+.filter-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-overlay__text {
+  @include font($primary-font-family, 18px, 400, 1.56, 0.03em, $primary-color);
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background: $overlay-background;
+  transition: transform 500ms ease-out;
+}
+
+.filter-desc {
+  padding: 20px 24px;
+  border-bottom: 1px solid $primary-color-border;
+  border-left: 1px solid $primary-color-border;
+  border-right: 1px solid $primary-color-border;
+}
+
+.filter-desc__title {
+  @include font(
+    $primary-font-family,
+    18px,
+    700,
+    2,
+    0.06em,
+    $primary-text-color
+  );
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.filter-desc__text {
+  @include font(
+    $primary-font-family,
+    16px,
+    400,
+    1.88,
+    0.03em,
+    $secondary-text-color
+  );
+  margin-top: 0;
+  margin-bottom: 0;
+}

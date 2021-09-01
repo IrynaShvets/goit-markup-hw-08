@@ -1,0 +1,42 @@
+.strategy {
+  display: flex;
+  flex-basis: calc(100% / 4 - 30px);
+}
+
+.strategy .strategy__list + .strategy__list {
+  margin-left: 30px;
+}
+
+.strategy__list {
+  width: 270px;
+}
+
+.strategy__icon {
+  @include flex(inline-flex, center, center);
+  width: 270px;
+  height: 120px;
+  border-radius: $primary-border-radius;
+  margin-bottom: 30px;
+
+  &--background {
+    background: $section-background;
+  }
+}
+
+.strategy__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.strategy__text {
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.71;
+
+  &--color {
+    color: $secondary-text-color;
+  }
+}

@@ -1,0 +1,53 @@
+.section--background {
+  background: $section-background;
+}
+
+.command {
+  display: flex;
+  flex-basis: calc(100% / 4 - 30px);
+}
+
+.command .command__list + .command__list {
+  margin-left: 30px;
+}
+
+.command__list {
+  @include bordered(0, $primary-color-border);
+  width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.command__meta {
+  padding: 30px 32px;
+  background: $primary-color;
+}
+
+.command__name {
+  @include font(
+    $primary-font-family,
+    16px,
+    500,
+    1.19,
+    0.03em,
+    $primary-text-color
+  );
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.command__profession {
+  @include font(
+    $primary-font-family,
+    16px,
+    400,
+    1.19,
+    0.03em,
+    $secondary-text-color
+  );
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-align: center;
+}

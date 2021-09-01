@@ -1,0 +1,135 @@
+.header {
+  border-bottom: 1px solid $color-border-header;
+}
+
+.container--centered {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-nav__navbar {
+  display: flex;
+  margin-left: 93px;
+}
+
+.header-nav__logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  &--color {
+    color: $selection-color;
+  }
+}
+
+.logo {
+  @include font($logo-font-family, 26px, bold, 1.19, 0.03em, $logo-color);
+  text-decoration: none;
+  font-style: normal;
+}
+
+.header-nav__link {
+  @include font(
+    $primary-font-family,
+    14px,
+    500,
+    1.14,
+    0.02em,
+    $primary-text-color
+  );
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-style: normal;
+  text-decoration: none;
+  @include transition(color, null, null, 250ms, $transition-cubic-bezier);
+
+  &--current,
+  &:hover,
+  &:focus {
+    color: $selection-color;
+  }
+
+  &--current::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: $selection-color;
+    border-radius: 2px;
+    transform: scaleX(1);
+    opacity: 1;
+    @include transition(
+      transform,
+      opacity,
+      null,
+      250ms,
+      $transition-cubic-bezier
+    );
+  }
+
+  &--current:hover::after {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
+.header-nav__navbar .header-nav__list + .header-nav__list {
+  margin-left: 50px;
+}
+
+/* Контакты хедера */
+
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contacts .header-contacts__list + .header-contacts__list {
+  margin-left: 50px;
+}
+
+.header-contacts__list .header-contacts__link {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+  text-decoration: none;
+  @include transition(color, null, null, 250ms, $transition-cubic-bezier);
+
+  &:hover,
+  &:focus {
+    color: $selection-color;
+  }
+
+  &:hover .header-contacts__icon,
+  &:focus .header-contacts__icon {
+    color: $selection-color;
+  }
+}
+
+.header-contacts__link .header-contacts__icon {
+  fill: currentColor;
+}
+
+.header-contacts__list {
+  @include flex(flex, center, center);
+}
+
+.header-contacts__icon {
+  margin-right: 10px;
+
+  &--color {
+    fill: $secondary-text-color;
+    @include transition(fill, null, null, 250ms, $transition-cubic-bezier);
+  }
+}

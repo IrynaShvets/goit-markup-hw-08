@@ -1,0 +1,165 @@
+.footer {
+  @include sectionPadding(60px, 60px);
+  background-color: $footer-background;
+}
+
+.container--baseline {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-address {
+  width: 231px;
+}
+
+.footer-link {
+  margin-bottom: 20px;
+
+  &__logo--accent {
+    color: $selection-color;
+  }
+  &__logo--color {
+    color: $primary-color;
+  }
+}
+
+.address {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.71;
+  color: $primary-color;
+}
+
+.address__list {
+  margin-bottom: 9px;
+}
+
+.address__contact {
+  color: $address-text-color;
+  text-decoration: none;
+  @include transition(color, null, null, 250ms, $transition-cubic-bezier);
+
+  &:hover,
+  &:focus {
+    color: $selection-color;
+  }
+}
+
+.join {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+  width: 206px;
+}
+
+.join__subtitle {
+  @include font($primary-font-family, 14px, 700, 1.14, 0.03em, $primary-color);
+  margin: 0;
+  margin-bottom: 20px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-socials__item {
+  margin-left: 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.footer-socials__link {
+  @include flex(inline-flex, center, center);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $primary-color;
+  background: $icon-background-highlighted;
+  @include transition(
+    color,
+    background-color,
+    null,
+    250ms,
+    $transition-cubic-bezier
+  );
+
+  &:hover,
+  &:focus {
+    background-color: $selection-color;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    color: $primary-color;
+  }
+}
+
+.footer-socials__icon {
+  fill: currentColor;
+}
+
+/* Форма футера */
+
+.subscribe {
+  margin-left: 93px;
+}
+
+.subscribe__subtitle {
+  @include font($primary-font-family, 14px, 700, 1.14, 0.03em, $primary-color);
+  margin: 0;
+  margin-bottom: 20px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.form-subscribe__label {
+  display: flex;
+  visibility: hidden;
+}
+
+.form-subscribe__input {
+  @include bordered(1px, $footer-input-color);
+  @include font(inherit, 16px, 400, 1.25, 0.03em, $footer-placeholder-color);
+  margin: 0;
+  padding: 15px 16px;
+  border-radius: $primary-border-radius;
+  width: 358px;
+  margin-right: 8px;
+  background-color: $footer-background;
+  outline: none;
+  @include transition(border, null, null, 250ms, $transition-cubic-bezier);
+
+  &:hover,
+  &:focus {
+    border-color: $selection-color;
+  }
+}
+
+.form-subscribe__button {
+  display: inline-flex;
+  padding: 10px 28px 10px 29px;
+  width: 200px;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.15);
+  &:hover,
+  &:focus {
+    color: $button-hover-color;
+    background-color: $button-hover-background;
+    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &:hover .form-subscribe__icon,
+  &:focus .form-subscribe__icon {
+    @include transition(color, null, null, 250ms, $transition-cubic-bezier);
+    color: $button-hover-color;
+  }
+}
+
+.form-subscribe__icon {
+  fill: currentColor;
+  margin-left: 10px;
+}

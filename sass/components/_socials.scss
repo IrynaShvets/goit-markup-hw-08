@@ -1,0 +1,41 @@
+.socials {
+  display: flex;
+  justify-content: center;
+}
+
+.socials__item {
+  margin-left: 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.socials__link {
+  @include flex(inline-flex, center, center);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $icon-color;
+  @include transition(
+    color,
+    background-color,
+    null,
+    250ms,
+    $transition-cubic-bezier
+  );
+
+  &:hover,
+  &:focus {
+    background-color: $selection-color;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    color: $primary-color;
+  }
+}
+
+.socials__icon {
+  fill: currentColor;
+}
