@@ -3,12 +3,16 @@
 }
 
 .command {
-  display: flex;
-  flex-basis: calc(100% / 4 - 30px);
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }
 
 .command .command__list + .command__list {
-  margin-left: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
 }
 
 .command__list {

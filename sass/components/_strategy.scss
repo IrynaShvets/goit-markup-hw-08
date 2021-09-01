@@ -1,10 +1,14 @@
 .strategy {
-  display: flex;
-  flex-basis: calc(100% / 4 - 30px);
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }
 
 .strategy .strategy__list + .strategy__list {
-  margin-left: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
 }
 
 .strategy__list {
@@ -12,11 +16,13 @@
 }
 
 .strategy__icon {
-  @include flex(inline-flex, center, center);
+  @media screen and (min-width: 1200px) {
+    @include flex(inline-flex, center, center);
+    margin-bottom: 30px;
+  }
   width: 270px;
   height: 120px;
   border-radius: $primary-border-radius;
-  margin-bottom: 30px;
 
   &--background {
     background: $section-background;

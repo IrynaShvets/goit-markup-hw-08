@@ -17,6 +17,9 @@
     <header class="header">
         <!-- Навигация -->
         <div class="container container--centered">
+            <!-- Меню для мобилкы -->
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu"></button>
+            <ul class="menu"></ul>
             <nav class="header-nav">
                 <a href="./index.html" class="header-nav__logo logo"><span class="header-nav__logo--color">Web</span>Studio</a>
                 <ul class="header-nav__navbar">
@@ -49,7 +52,10 @@
     </header>
     
     <main> 
-        
+        <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu"></button>
+            <ul class="mobile-menu"></ul>
+        </div>
         <!--Герой-->
         <section class="hero">
             <div class="container">
@@ -450,7 +456,10 @@
             </form>
         </div>
     </div>
-
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>

@@ -1,4 +1,10 @@
 .section--offset {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.section--offset {
   padding-top: 0;
 }
 
@@ -17,6 +23,9 @@
 
 .work-img__item {
   @include flex(flex, center, center);
+}
+
+.work-img__item {
   height: 70px;
   position: absolute;
   bottom: 0;

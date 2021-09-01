@@ -1,11 +1,15 @@
 .footer {
-  @include sectionPadding(60px, 60px);
   background-color: $footer-background;
+  @media screen and (min-width: 1200px) {
+    @include sectionPadding(60px, 60px);
+  }
 }
 
 .container--baseline {
-  display: flex;
-  align-items: baseline;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer-address {
@@ -13,7 +17,9 @@
 }
 
 .footer-link {
-  margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 20px;
+  }
 
   &__logo--accent {
     color: $selection-color;
@@ -31,7 +37,9 @@
 }
 
 .address__list {
-  margin-bottom: 9px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 }
 
 .address__contact {
@@ -46,9 +54,14 @@
 }
 
 .join {
-  display: flex;
-  flex-direction: column;
-  margin-left: 70px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+  }
+}
+
+.join {
   width: 206px;
 }
 
@@ -61,20 +74,31 @@
 }
 
 .footer-socials {
-  display: flex;
-  justify-content: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .footer-socials__item {
-  margin-left: 10px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 10px;
+  }
 
   &:first-child {
-    margin-left: 0;
+    @media screen and (min-width: 1200px) {
+      margin-left: 0;
+    }
   }
 }
 
 .footer-socials__link {
-  @include flex(inline-flex, center, center);
+  @media screen and (min-width: 1200px) {
+    @include flex(inline-flex, center, center);
+  }
+}
+
+.footer-socials__link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -106,19 +130,30 @@
 /* Форма футера */
 
 .subscribe {
-  margin-left: 93px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+}
+.subscribe__subtitle {
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 20px;
+  }
 }
 
 .subscribe__subtitle {
   @include font($primary-font-family, 14px, 700, 1.14, 0.03em, $primary-color);
   margin: 0;
-  margin-bottom: 20px;
   font-style: normal;
   text-transform: uppercase;
 }
 
 .form-subscribe__label {
-  display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.form-subscribe__label {
   visibility: hidden;
 }
 
@@ -142,6 +177,9 @@
 
 .form-subscribe__button {
   display: inline-flex;
+}
+
+.form-subscribe__button {
   padding: 10px 28px 10px 29px;
   width: 200px;
   box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.15);

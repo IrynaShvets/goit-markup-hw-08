@@ -1,11 +1,15 @@
 .filter-buttons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .filter-buttons .filter-buttons__item + .filter-buttons__item {
-  margin-left: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 8px;
+  }
 }
 
 .filter-buttons__btn {
@@ -35,18 +39,24 @@
 }
 
 .filter-cards {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .filter-cards__list {
+  @media screen and (min-width: 1200px) {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
   width: 370px;
-  margin-top: 30px;
-  margin-left: 30px;
 
   &:nth-child(-n + 3) {
-    margin-top: 0;
+    @media screen and (min-width: 1200px) {
+      margin-top: 0;
+    }
   }
 }
 
