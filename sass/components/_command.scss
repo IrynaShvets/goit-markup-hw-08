@@ -7,6 +7,8 @@
     display: flex;
     flex-basis: calc(100% / 4 - 30px);
   }
+  @media screen and (max-width: 767px) {
+  }
 }
 
 .command .command__list + .command__list {
@@ -24,7 +26,10 @@
 }
 
 .command__meta {
-  padding: 30px 32px;
+  @media screen and (min-width: 1200px) {
+    padding: 30px 32px;
+  }
+
   background: $primary-color;
 }
 
