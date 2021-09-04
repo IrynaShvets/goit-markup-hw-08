@@ -16,20 +16,17 @@
 <body>
     <header class="header">
         <!-- Навигация -->
-        <div class="container container--centered header-container">
+         <div class="container container--centered header-container">
             <!-- Меню для мобилкы -->
-            
             <nav class="header-nav">
                     <button class="menu-toggle js-open-menu is-open" aria-expanded="false" aria-controls="mobile-menu">
                         <svg class="menu-toggle__icon" width="40" height="40">
                             <use class="menu-toggle__icon-open" href="./images/sprite.svg#icon-menu_40px"></use>
                         </svg>
                     </button>
-                    <ul class="menu is-open"></ul>
                 
                 <a href="./index.html" class="header-nav__logo logo"><span
                         class="header-nav__logo--color">Web</span>Studio</a>
-
                 <ul class="header-nav__navbar">
                     <li class="header-nav__list"><a href="./index.html"
                             class="header-nav__link header-nav__link--current">Студия</a></li>
@@ -148,7 +145,11 @@
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="command">
                     <li class="command__list">
-                        <img src="./images/img(13).jpg" alt="Игорь Демьяненко" width="270" height="260">
+                        <img srcset="./images/command-original1.jpg 1x, 
+                                     ./images/command1.jpg 2x" 
+                                     src="./images/command-original1.jpg" 
+                                     alt="Игорь Демьяненко"
+                                     sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
                         <div class="command__meta">
                             <h3 class="command__name">Игорь Демьяненко</h3>
                             <p class="command__profession">Product Designer</p>
@@ -186,7 +187,11 @@
                     </li>
 
                     <li class="command__list">
-                        <img src="./images/img(1).jpg" alt="Ольга Репина" width="270" height="260">
+                        <img srcset="./images/command-original2.jpg 1x, 
+                                     ./images/command2.jpg 2x" 
+                                     src="./images/command-original2.jpg" 
+                                     alt="Ольга Репина" 
+                                     sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
                         <div class="command__meta">
                             <h3 class="command__name">Ольга Репина</h3>
                             <p class="command__profession">Frontend Developer</p>
@@ -223,7 +228,11 @@
                         </div>
                     </li>
                     <li class="command__list">
-                        <img src="./images/img(2).jpg" alt="Николай Тарасов" width="270" height="260">
+                        <img srcset="./images/command-original3.jpg 1x, 
+                                     ./images/command3.jpg 2x" 
+                                     src="./images/command-original3.jpg" 
+                                     alt="Николай Тарасов"
+                                     sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
                         <div class="command__meta">
                             <h3 class="command__name">Николай Тарасов</h3>
                             <p class="command__profession">Marketing</p>
@@ -260,7 +269,11 @@
                         </div>
                     </li>
                     <li class="command__list">
-                        <img src="./images/img(3).jpg" alt="Михаил Ермаков" width="270" height="260">
+                        <img srcset="./images/command-original4.jpg 1x, 
+                                     ./images/command4.jpg 2x" 
+                                     src="./images/command-original4.jpg" 
+                                     alt="Михаил Ермаков"
+                                     sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
                         <div class="command__meta">
                             <h3 class="command__name">Михаил Ермаков</h3>
                             <p class="command__profession">UI Designer</p>
@@ -416,79 +429,41 @@
             </div>
         </div>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button type="button" class="menu-toggle js-close-menu ">
+            <svg class="menu-toggle__icon" width="40" height="40">
+                <use class="menu-toggle__icon-close" href="./images/sprite.svg#icon-close-black"></use>               
+            </svg>                    
+        </button>
+        <div class="menu-container__nav">                
+            <ul class="mobile-menu">
+                <li class="mobile-menu__list"><a href="./index.html" class="mobile-menu__link">Студия</a></li>
+                <li class="mobile-menu__list"><a href="./portfolio.html" class="mobile-menu__link">Портфолио</a></li>
+                <li class="mobile-menu__list"><a href="" class="mobile-menu__link">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="menu-container__contacts">
+            <ul class="contacts__menu-container">
 
-                <div class="menu-container js-menu-container" id="mobile-menu">
-                    <button type="button" class="menu-toggle js-close-menu ">
-                            <svg class="menu-toggle__icon" width="40" height="40">
-                               <!-- <use class="menu-toggle__icon-open" href="./images/sprite.svg#icon-menu_40px"></use>-->
-                                <use class="menu-toggle__icon-close" href="./images/sprite.svg#icon-close-black"></use>
-
-                            </svg>
-                    </button>
-                    <div class="menu-container__nav">
-                        <ul class="mobile-menu">
-                            <li class="mobile-menu__list"><a href="./index.html" class="mobile-menu__link">Студия</a></li>
-                            <li class="mobile-menu__list"><a href="./portfolio.html" class="mobile-menu__link">Портфолио</a></li>
-                            <li class="mobile-menu__list"><a href="" class="mobile-menu__link">Контакты</a></li>
-                        </ul>
-                    </div>
-                    <div class="menu-container__contacts">
-                        <ul>
-                            <li class="mobile-menu__list">
-                                <a href="mailto:info@devstudio.com" class="">
-                                    <svg class="header-contacts__icon header-contacts__icon--color" width="16px" height="12px">
-                                        <use href="./images/sprite.svg#icon-envelope"></use>
-                                    </svg>
-                                    info@devstudio.com
-                                </a>
-                            </li>
-                            <li class="mobile-menu__list">
-                                <a href="tel:+380961111111" class="">
-                                    <svg class="header-contacts__icon header-contacts__icon--color" width="10px" height="16px">
-                                        <use href="./images/sprite.svg#icon-phone"></use>
-                                    </svg>
-                                    +38 096 111 11 11
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-       <!-- <div class="menu-container js-menu-container" id="mobile-menu">
-            <button type="button" class="menu-toggle js-close-menu">
-                <svg class="menu-toggle__icon" width="40" height="40">
-                    <use class="menu-toggle__icon-close" href="./images/sprite.svg#icon-close-black"></use>
-                </svg>
-            </button>
-            <div class="menu-container__nav">  
-                <ul class="mobile-menu">
-                    <li class="mobile-menu__list"><a href="./index.html" class="mobile-menu__link">Студия</a></li>
-                    <li class="mobile-menu__list"><a href="./portfolio.html" class="mobile-menu__link">Портфолио</a></li>
-                    <li class="mobile-menu__list"><a href="" class="mobile-menu__link">Контакты</a></li>
+                <li class="contacts__mobile-menu contacts__mobile-menu-offset">
+                    <a class="contacts__mobile-link" href="tel:+380961111111" class="">+38 096 111 11 11</a>
+                </li>
+                <li class="contacts__mobile-menu">
+                    <a class="contacts__imail-link" href="mailto:info@devstudio.com" class="">info@devstudio.com</a>
+                </li>
+                
+            </ul>
+            <div class="menu-container__socials">
+                <ul class="mobile-socials">
+                     <li class="mobile-socials__item"><a href="" class="mobile-socials__link">Instagram</a></li>
+                     <li class="mobile-socials__item"><a href="" class="mobile-socials__link">Twitter</a></li>
+                     <li class="mobile-socials__item"><a href="" class="mobile-socials__link">Facebook</a></li>
+                     <li class="mobile-socials__item"><a href="" class="mobile-socials__link">LinkedIn</a></li>
                 </ul>
             </div>
-            <div class="menu-container__contacts">
-                <ul>    
-                    <li class="mobile-menu__list">
-                        <a href="mailto:info@devstudio.com" class="">
-                            <svg class="header-contacts__icon header-contacts__icon--color" width="16px" height="12px">
-                                <use href="./images/sprite.svg#icon-envelope"></use>
-                            </svg>
-                            info@devstudio.com
-                        </a>
-                    </li>
-                    <li class="mobile-menu__list">
-                        <a href="tel:+380961111111" class="">
-                            <svg class="header-contacts__icon header-contacts__icon--color" width="10px" height="16px">
-                                <use href="./images/sprite.svg#icon-phone"></use>
-                            </svg>
-                            +38 096 111 11 11
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-        </div>-->
-    
+        </div>
+        
+    </div>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button data-modal-close class="modal__button-close">

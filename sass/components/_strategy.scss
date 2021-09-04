@@ -12,16 +12,21 @@
 }
 
 .strategy__list {
-  width: 270px;
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .strategy__icon {
   @media screen and (min-width: 1200px) {
     @include flex(inline-flex, center, center);
-    margin-bottom: 30px;
+    width: 270px;
   }
-  width: 270px;
+  @media screen and (max-width: 767px) {
+    @include flex(flex, center, center);
+  }
   height: 120px;
+  margin-bottom: 30px;
   border-radius: $primary-border-radius;
 
   &--background {
@@ -30,6 +35,9 @@
 }
 
 .strategy__title {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
   margin: 0;
   margin-bottom: 10px;
   font-size: 14px;
