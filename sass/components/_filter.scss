@@ -4,14 +4,16 @@
     justify-content: center;
     margin-bottom: 50px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    justify-content: center;
+  }
   @media screen and (max-width: 767px) {
     flex-wrap: wrap;
     margin-bottom: 40px;
-    width: 362px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .filter-buttons .filter-buttons__item + .filter-buttons__item {
     margin-left: 8px;
   }
@@ -61,6 +63,10 @@
     flex-wrap: wrap;
     margin-left: -30px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .filter-cards__list {
@@ -68,11 +74,18 @@
   @media screen and (min-width: 1200px) {
     margin-left: 30px;
     max-width: 370px;
-  }
-
-  &:nth-child(-n + 3) {
-    @media screen and (min-width: 1200px) {
+    &:nth-child(-n + 3) {
       margin-top: 0;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 354px;
+
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(1) {
     }
   }
 }
@@ -98,18 +111,7 @@
   position: relative;
   overflow: hidden;
 }
-/*
-.filter-overlay__desktop-img {
-  @media screen and (max-width: 1199px) {
-    display: none;
-  }
-}
-.filter-overlay__mobile-img {
-  @media screen and (min-width: 1200px) {
-    display: none;
-  }
-}
-*/
+
 .filter-overlay__text {
   @include font($primary-font-family, 18px, 400, 1.56, 0.03em, $primary-color);
   position: absolute;

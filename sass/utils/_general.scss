@@ -34,9 +34,14 @@ ul {
   height: 100%;
 
   @media screen and (min-width: 1200px) {
+    flex-direction: column;
     @include sectionPadding(94px, 94px);
     @include flex(flex, center, center);
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include sectionPadding(60px, 60px);
     flex-direction: column;
+    @include flex(flex, center, center);
   }
   @media screen and (max-width: 767px) {
     @include sectionPadding(60px, 60px);
