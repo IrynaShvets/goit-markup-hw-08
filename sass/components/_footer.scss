@@ -31,6 +31,9 @@
     margin-right: 165px;
     margin-bottom: 60px;
   }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 }
 
 .footer-link {
@@ -50,9 +53,6 @@
 }
 
 .address {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
-  }
   font-style: normal;
   font-weight: normal;
   line-height: 1.71;
@@ -159,20 +159,6 @@
   @media screen and (min-width: 1200px) {
     margin-left: 93px;
   }
-  @media screen and (min-width: 768px) and (min-width: 1199px) {
-    display: flex;
-  }
-}
-
-.form-subscribe {
-  @media screen and (min-width: 768px) and (min-width: 1199px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-.subscribe__subtitle {
-  margin-bottom: 20px;
 }
 
 .subscribe__subtitle {
@@ -184,21 +170,18 @@
 
 .form-subscribe__label {
   display: flex;
-}
-
-.form-subscribe__label {
   visibility: hidden;
 }
 
 .form-subscribe__input {
   @media screen and (min-width: 1200px) {
     width: 358px;
+    margin-right: 8px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+
+  @media screen and (max-width: 1199px) {
     width: 450px;
-  }
-  @media screen and (max-width: 767px) {
-    width: 90vw;
+    width: 100%;
     margin-bottom: 20px;
   }
   @include bordered(1px, $footer-input-color);
@@ -206,8 +189,6 @@
   margin: 0;
   padding: 15px 16px;
   border-radius: $primary-border-radius;
-
-  margin-right: 8px;
   background-color: $footer-background;
   outline: none;
   @include transition(border, null, null, 250ms, $transition-cubic-bezier);
