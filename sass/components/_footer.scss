@@ -37,13 +37,7 @@
 }
 
 .footer-link {
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 20px;
-  }
-  @media screen and (max-width: 767px) {
-    margin-bottom: 20px;
-  }
-
+  margin-bottom: 20px;
   &__logo--accent {
     color: $selection-color;
   }
@@ -62,6 +56,9 @@
 .address__list {
   @media screen and (min-width: 1200px) {
     margin-bottom: 9px;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 8px;
   }
 }
 

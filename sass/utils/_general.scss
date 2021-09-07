@@ -23,6 +23,11 @@ img {
   height: auto;
   object-fit: cover;
 }
+picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 ul {
   list-style: none;

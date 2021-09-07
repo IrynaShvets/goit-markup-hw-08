@@ -28,7 +28,7 @@
                         class="header-nav__logo--color">Web</span>Studio</a>
                 <ul class="header-nav__navbar">
                     <li class="header-nav__list"><a href="./index.html"
-                            class="header-nav__link">Студия</a></li>
+                            class="header-nav__link ">Студия</a></li>
                     <li class="header-nav__list"><a href="./portfolio.html" class="header-nav__link header-nav__link--current">Портфолио</a></li>
                     <li class="header-nav__list"><a href="" class="header-nav__link">Контакты</a></li>
                 </ul>
@@ -36,8 +36,8 @@
     
             <!-- Контакты-->
             <ul class="header-contacts">
-                <li class="header-contacts__list">
-                    <a href="mailto:info@devstudio.com" class="header-contacts__link">
+                <li class="header-contacts__list header-contacts__list--offset">
+                    <a href="mailto:info@devstudio.com" class="header-contacts__link header-contacts__link--top">
                         <svg class="header-contacts__icon header-contacts__icon--color" width="16px" height="12px">
                             <use href="./images/sprite.svg#icon-envelope"></use>
                         </svg>
@@ -45,7 +45,7 @@
                     </a>
                 </li>
                 <li class="header-contacts__list">
-                    <a href="tel:+380961111111" class="header-contacts__link">
+                    <a href="tel:+380961111111" class="header-contacts__link header-contacts__link--bottom">
                         <svg class="header-contacts__icon header-contacts__icon--color" width="10px" height="16px">
                             <use href="./images/sprite.svg#icon-phone"></use>
                         </svg>
@@ -71,21 +71,25 @@
                 </ul>
                 <ul class="filter-cards">
                     <li class="filter-cards__list">
-                        <a href="" class="filter-cards__link">
-                            <div class="filter-overlay filter-overlay--first">
-                                <img srcset="./images/1mobile-filter1x.jpg 1x, 
-                                            ./images/1mobile-filter2x.jpg 2x,
-                                            ./images/1tablet-filter1x.jpg 1x, 
-                                            ./images/1tablet-filter2x.jpg 2x,
-                                            ./images/1desktop-filter1x.jpg 1x, 
-                                            ./images/1desktop-filter2x.jpg 2x" 
-                                            src="./images/1desktop-filter1x.jpg"
-                                            alt="Технокряк"
-                                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
+                        <a href="" class="filter-cards__link filter-cards__link--first">
+                            <div class="filter-overlay">
+                                <picture>
+                                    <source srcset="./images/1mobile-filter1x.jpg 450w, 
+                                            ./images/1mobile-filter2x.jpg 900w"
+                                        media="(max-width: 767px)" sizes="(min-width: 450px) 900px, 100vw">
+                                    <source srcset="./images/1tablet-filter1x.jpg 354w, 
+                                            ./images/1tablet-filter2x.jpg 708w"
+                                        media="(min-width: 768px)" sizes="(min-width: 354px) 708px, 100vw">
+                                    <source srcset="./images/1desktop-filter1x.jpg 370w, 
+                                            ./images/1desktop-filter2x.jpg 740w" 
+                                        media="(min-width: 1200px)"
+                                        sizes="(min-width: 370px) 740px, 100vw">
+                                    <img src="./images/1desktop-filter1x.jpg" alt="Технокряк">
+                                </picture>
                                 <div class="filter-overlay__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
                                 шпионажа и атак на защищённые сервера конкурентов.</div>
                             </div>
-                            <div class="filter-desc filter-desc--first">
+                            <div class="filter-desc filter-desk--first">
                                 <h3 class="filter-desc__title">Технокряк</h3>
                                 <p class="filter-desc__text">Веб-сайт</p>
                             </div>
@@ -94,15 +98,18 @@
                     <li class="filter-cards__list">
                         <a href="" class="filter-cards__link">
                             <div class="filter-overlay filter-overlay--second">
-                                <img srcset="./images/2mobile-filter1x.jpg 1x, 
-                                            ./images/2mobile-filter2x.jpg 2x,
-                                            ./images/2tablet-filter1x.jpg 1x, 
-                                            ./images/2tablet-filter2x.jpg 2x,
-                                            ./images/2desktop-filter1x.jpg 1x, 
-                                            ./images/2desktop-filter2x.jpg 2x" 
-                                            src="./images/2desktop-filter1x.jpg"
-                                            alt="Постер" 
-                                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
+                                <picture>
+                                    <source srcset="./images/2mobile-filter1x.jpg 450w, 
+                                                ./images/2mobile-filter2x.jpg 900w" media="(max-width: 767px)"
+                                        sizes="(min-width: 450px) 900px, 100vw">
+                                    <source srcset="./images/2tablet-filter1x.jpg 354w, 
+                                                    ./images/2tablet-filter2x.jpg 708w" media="(min-width: 768px)"
+                                        sizes="(min-width: 354px) 708px, 100vw">
+                                    <source srcset="./images/2desktop-filter1x.jpg 370w, 
+                                                    ./images/2desktop-filter2x.jpg 740w" media="(min-width: 1200px)"
+                                        sizes="(min-width: 370px) 740px, 100vw">
+                                    <img src="./images/2desktop-filter1x.jpg" alt="Постер">
+                                </picture> 
                                 <div class="filter-overlay__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                     платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</div>
                             </div>
@@ -115,15 +122,18 @@
                     <li class="filter-cards__list">
                         <a href="" class="filter-cards__link">
                             <div class="filter-overlay">
-                                <img srcset="./images/3mobile-filter1x.jpg 1x, 
-                                            ./images/3mobile-filter2x.jpg 2x,
-                                            ./images/3tablet-filter1x.jpg 1x, 
-                                            ./images/3tablet-filter2x.jpg 2x,
-                                            ./images/3desktop-filter1x.jpg 1x, 
-                                            ./images/3desktop-filter2x.jpg 2x" 
-                                            src="./images/3desktop-filter1x.jpg"
-                                            alt="Эмблема ресторана"
-                                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
+                                <picture>
+                                    <source srcset="./images/3mobile-filter1x.jpg 450w, 
+                                        ./images/3mobile-filter2x.jpg 900w" media="(max-width: 767px)"
+                                        sizes="(min-width: 450px) 900px, 100vw">
+                                    <source srcset="./images/3tablet-filter1x.jpg 354w, 
+                                                ./images/3tablet-filter2x.jpg 708w" media="(min-width: 768px)"
+                                        sizes="(min-width: 354px) 708px, 100vw">
+                                    <source srcset="./images/3desktop-filter1x.jpg 370w, 
+                                                 ./images/3desktop-filter2x.jpg 740w" media="(min-width: 1200px)"
+                                        sizes="(min-width: 370px) 740px, 100vw">
+                                    <img src="./images/3desktop-filter1x.jpg" alt="Эмблема ресторана">
+                                </picture> 
                                 <div class="filter-overlay__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                     платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</div>
                             </div>
@@ -136,15 +146,18 @@
                     <li class="filter-cards__list">
                         <a href="" class="filter-cards__link">
                             <div class="filter-overlay">
-                                <img srcset="./images/4mobile-filter1x.jpg 1x, 
-                                            ./images/4mobile-filter2x.jpg 2x,
-                                            ./images/4tablet-filter1x.jpg 1x, 
-                                            ./images/4tablet-filter2x.jpg 2x,
-                                            ./images/4desktop-filter1x.jpg 1x, 
-                                            ./images/4desktop-filter2x.jpg 2x" 
-                                            src="./images/4desktop-filter1x.jpg"
-                                            alt="Наушники"
-                                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
+                                <picture>
+                                    <source srcset="./images/4mobile-filter1x.jpg 450w, 
+                                                ./images/4mobile-filter2x.jpg 900w" media="(max-width: 767px)"
+                                        sizes="(min-width: 450px) 900px, 100vw">
+                                    <source srcset="./images/4tablet-filter1x.jpg 354w, 
+                                             ./images/4tablet-filter2x.jpg 708w" media="(min-width: 768px)"
+                                        sizes="(min-width: 354px) 708px, 100vw">
+                                    <source srcset="./images/4desktop-filter1x.jpg 370w, 
+                                         ./images/4desktop-filter2x.jpg 740w" media="(min-width: 1200px)"
+                                        sizes="(min-width: 370px) 740px, 100vw">
+                                    <img src="./images/4desktop-filter1x.jpg" alt="Наушники">
+                                </picture>
                                 <div class="filter-overlay__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                     платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</div>
                             </div>
@@ -157,15 +170,18 @@
                     <li class="filter-cards__list">
                         <a href="" class="filter-cards__link">
                             <div class="filter-overlay">
-                                <img srcset="./images/5mobile-filter1x.jpg 1x, 
-                                            ./images/5mobile-filter2x.jpg 2x,
-                                            ./images/5tablet-filter1x.jpg 1x, 
-                                            ./images/5tablet-filter2x.jpg 2x,
-                                            ./images/5desktop-filter1x.jpg 1x, 
-                                            ./images/5desktop-filter2x.jpg 2x" 
-                                            src="./images/5desktop-filter1x.jpg"
-                                            alt="Коробки"
-                                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
+                                <picture>
+                                    <source srcset="./images/5mobile-filter1x.jpg 450w, 
+                                                    ./images/5mobile-filter2x.jpg 900w" media="(max-width: 767px)"
+                                        sizes="(min-width: 450px) 900px, 100vw">
+                                    <source srcset="./images/5tablet-filter1x.jpg 354w, 
+                                                    ./images/5tablet-filter2x.jpg 708w" media="(min-width: 768px)"
+                                        sizes="(min-width: 354px) 708px, 100vw">
+                                    <source srcset="./images/5desktop-filter1x.jpg 370w, 
+                                                    ./images/5desktop-filter2x.jpg 740w" media="(min-width: 1200px)"
+                                        sizes="(min-width: 370px) 740px, 100vw">
+                                    <img src="./images/5desktop-filter1x.jpg" alt="Коробки">
+                                </picture> 
                                 <div class="filter-overlay__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                     платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</div>
                             </div>
@@ -178,15 +194,18 @@
                     <li class="filter-cards__list">
                         <a href="" class="filter-cards__link">
                             <div class="filter-overlay">
-                                <img srcset="./images/6mobile-filter1x.jpg 1x, 
-                                            ./images/6mobile-filter2x.jpg 2x,
-                                            ./images/6tablet-filter1x.jpg 1x, 
-                                            ./images/6tablet-filter2x.jpg 2x,
-                                            ./images/6desktop-filter1x.jpg 1x, 
-                                            ./images/6desktop-filter2x.jpg 2x" 
-                                            src="./images/6desktop-filter1x.jpg"
-                                            alt="Экран компьютера"
-                                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
+                                <picture>
+                                    <source srcset="./images/6mobile-filter1x.jpg 450w, 
+                                                    ./images/6mobile-filter2x.jpg 900w" media="(max-width: 767px)"
+                                        sizes="(min-width: 450px) 900px, 100vw">
+                                    <source srcset="./images/6tablet-filter1x.jpg 354w, 
+                                                 ./images/6tablet-filter2x.jpg 708w" media="(min-width: 768px)"
+                                        sizes="(min-width: 354px) 708px, 100vw">
+                                    <source srcset="./images/6desktop-filter1x.jpg 370w, 
+                                                ./images/6desktop-filter2x.jpg 740w" media="(min-width: 1200px)"
+                                        sizes="(min-width: 370px) 740px, 100vw">
+                                    <img src="./images/6desktop-filter1x.jpg" alt="Экран компьютера">
+                                </picture>
                                 <div class="filter-overlay__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                     платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</div>
                             </div>
@@ -199,15 +218,18 @@
                     <li class="filter-cards__list">
                         <a href="" class="filter-cards__link">
                             <div class="filter-overlay">
-                                <img srcset="./images/7mobile-filter1x.jpg 1x, 
-                                            ./images/7mobile-filter2x.jpg 2x,
-                                            ./images/7tablet-filter1x.jpg 1x, 
-                                            ./images/7tablet-filter2x.jpg 2x,
-                                            ./images/7desktop-filter1x.jpg 1x, 
-                                            ./images/7desktop-filter2x.jpg 2x" 
-                                            src="./images/7desktop-filter1x.jpg"
-                                            alt="Журнал"
-                                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
+                                <picture>
+                                    <source srcset="./images/7mobile-filter1x.jpg 450w, 
+                                                    ./images/7mobile-filter2x.jpg 900w" media="(max-width: 767px)"
+                                        sizes="(min-width: 450px) 900px, 100vw">
+                                    <source srcset="./images/7tablet-filter1x.jpg 354w, 
+                                                     ./images/7tablet-filter2x.jpg 708w" media="(min-width: 768px)"
+                                        sizes="(min-width: 354px) 708px, 100vw">
+                                    <source srcset="./images/7desktop-filter1x.jpg 370w, 
+                                                   ./images/7desktop-filter2x.jpg 740w" media="(min-width: 1200px)"
+                                        sizes="(min-width: 370px) 740px, 100vw">
+                                    <img src="./images/7desktop-filter1x.jpg" alt="Журнал">
+                                </picture> 
                                 <div class="filter-overlay__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                     платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</div>
                             </div>
@@ -220,15 +242,18 @@
                     <li class="filter-cards__list">
                         <a href="" class="filter-cards__link">
                             <div class="filter-overlay">
-                                <img srcset="./images/8mobile-filter1x.jpg 1x, 
-                                            ./images/8mobile-filter2x.jpg 2x,
-                                            ./images/8tablet-filter1x.jpg 1x, 
-                                            ./images/8tablet-filter2x.jpg 2x,
-                                            ./images/8desktop-filter1x.jpg 1x, 
-                                            ./images/8desktop-filter2x.jpg 2x" 
-                                            src="./images/8desktop-filter1x.jpg"
-                                            alt="Эмблема проекта"
-                                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
+                                <picture>
+                                    <source srcset="./images/8mobile-filter1x.jpg 450w, 
+                                                    ./images/8mobile-filter2x.jpg 900w" media="(max-width: 767px)"
+                                        sizes="(min-width: 450px) 900px, 100vw">
+                                    <source srcset="./images/8tablet-filter1x.jpg 354w, 
+                                                    ./images/8tablet-filter2x.jpg 708w" media="(min-width: 768px)"
+                                        sizes="(min-width: 354px) 708px, 100vw">
+                                    <source srcset="./images/8desktop-filter1x.jpg 370w, 
+                                                    ./images/8desktop-filter2x.jpg 740w" media="(min-width: 1200px)"
+                                        sizes="(min-width: 370px) 740px, 100vw">
+                                    <img src="./images/8desktop-filter1x.jpg" alt="Эмблема проекта">
+                                </picture>
                                 <div class="filter-overlay__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                     платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</div>
                             </div>
@@ -241,15 +266,18 @@
                     <li class="filter-cards__list">
                         <a href="" class="filter-cards__link">
                             <div class="filter-overlay">
-                                <img srcset="./images/9mobile-filter1x.jpg 1x, 
-                                            ./images/9mobile-filter2x.jpg 2x,
-                                            ./images/9tablet-filter1x.jpg 1x, 
-                                            ./images/9tablet-filter2x.jpg 2x,
-                                            ./images/9desktop-filter1x.jpg 1x, 
-                                            ./images/9desktop-filter2x.jpg 2x" 
-                                            src="./images/9desktop-filter1x.jpg"
-                                            alt="Ноутбук"
-                                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
+                                <picture>
+                                    <source srcset="./images/9mobile-filter1x.jpg 450w, 
+                                                    ./images/9mobile-filter2x.jpg 900w" media="(max-width: 767px)"
+                                        sizes="(min-width: 450px) 900px, 100vw">
+                                    <source srcset="./images/9tablet-filter1x.jpg 354w, 
+                                                    ./images/9tablet-filter2x.jpg 708w" media="(min-width: 768px)"
+                                        sizes="(min-width: 354px) 708px, 100vw">
+                                    <source srcset="./images/9desktop-filter1x.jpg 370w, 
+                                                    ./images/9desktop-filter2x.jpg 740w" media="(min-width: 1200px)"
+                                        sizes="(min-width: 370px) 740px, 100vw">
+                                    <img src="./images/9desktop-filter1x.jpg" alt="Ноутбук">
+                                </picture>
                                 <div class="filter-overlay__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                     платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</div>
                             </div>

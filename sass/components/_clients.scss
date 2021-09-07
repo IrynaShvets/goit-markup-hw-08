@@ -3,16 +3,23 @@
     display: flex;
     justify-content: center;
   }
-  @media screen and (max-width: 767px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 449px) {
+    display: flex;
+    justify-content: center;
   }
 }
 
