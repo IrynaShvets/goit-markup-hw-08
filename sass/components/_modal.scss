@@ -33,7 +33,6 @@
 .modal {
   @media screen and (max-width: 1199px) {
     max-width: 450px;
-
     height: 609px;
     width: 450px;
     width: 90%;
@@ -151,6 +150,8 @@
 .modal-form__field {
   @media screen and (max-width: 1199px) {
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   position: relative;
@@ -265,7 +266,7 @@
 /* Чекбокс */
 
 .modal-form__agreement {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 455px) {
     @include font(
       $primary-font-family,
       12px,
@@ -274,6 +275,18 @@
       0.03em,
       $secondary-text-color
     );
+    display: inline-block;
+  }
+  @media screen and (min-width: 456px) and (max-width: 1199px) {
+    @include font(
+      $primary-font-family,
+      12px,
+      400,
+      1.17,
+      0.03em,
+      $secondary-text-color
+    );
+    @include flex(flex, center, center);
   }
   @media screen and (min-width: 1200px) {
     @include font(
@@ -284,13 +297,12 @@
       0.03em,
       $secondary-text-color
     );
+    display: block;
+    @include flex(flex, center, center);
   }
-  display: block;
-  @include flex(flex, center, center);
 
   position: relative;
   margin-bottom: 30px;
-
   cursor: pointer;
 }
 .modal-form__link {
@@ -303,6 +315,7 @@
       0.03em,
       $selection-color
     );
+    display: inline-block;
   }
   @media screen and (min-width: 1200px) {
     @include font(
@@ -330,8 +343,7 @@
     border-color: $selection-color;
   }
 }
-.modal-form__checkbox {
-}
+
 .modal-form__checkbox:checked + .modal-form__check {
   border-color: $selection-color;
   background-color: $selection-color;

@@ -4,10 +4,14 @@
 
   @media screen and (min-width: 480px) {
     width: 480px;
+    width: 100%;
+    min-width: 480px;
   }
 
   @media screen and (min-width: 768px) {
     width: 768px;
+    width: 100%;
+    max-width: 1199px;
   }
   @media screen and (min-width: 1200px) {
     padding-left: 15px;
@@ -15,13 +19,14 @@
     width: 1200px;
 
     width: 100%;
+    max-width: 1600px;
   }
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1600px;
+
   border: 1px solid $secondary-text-color;
   background-color: $hero-background;
   text-align: center;

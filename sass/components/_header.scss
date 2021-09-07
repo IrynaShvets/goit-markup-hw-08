@@ -12,24 +12,22 @@
   z-index: 999;
   overflow-y: scroll;
   transform: translateX(100%);
-  @include transition(transform, null, null, 250ms, $transition-cubic-bezier);
   @media screen and (max-width: 767px) {
     display: none;
   }
   &.is-open {
     transform: translateX(0);
+    max-width: 767px;
+    width: 100%;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 25px;
+    animation: mobileWindow 500ms ease;
   }
 }
 
-.menu-container.is-open {
-  max-width: 767px;
-  width: 100%;
-  display: block;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 48px 25px;
-}
 .header-container {
   position: relative;
 }
@@ -391,5 +389,18 @@
   &--color {
     fill: $secondary-text-color;
     @include transition(fill, null, null, 250ms, $transition-cubic-bezier);
+  }
+}
+
+/* Анимация */
+
+@keyframes mobileWindow {
+  0% {
+    transform: scale(0);
+    transform-origin: top left;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: top left;
   }
 }
