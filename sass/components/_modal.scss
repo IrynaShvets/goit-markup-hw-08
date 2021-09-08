@@ -95,9 +95,6 @@
   transform: translate(-50%, -50%);
   fill: $modal-close-color;
   @include transition(color, null, null, 250ms, $transition-cubic-bezier);
-}
-
-.modal__icon-close {
   fill: currentColor;
 }
 
@@ -128,7 +125,6 @@
       $primary-text-color
     );
     display: block;
-
     text-align: center;
     margin-bottom: 12px;
   }
@@ -153,7 +149,6 @@
     margin-left: auto;
     margin-right: auto;
   }
-
   position: relative;
   margin-bottom: 7px;
   @include transition(color, null, null, 250ms, $transition-cubic-bezier);
@@ -182,7 +177,6 @@
 @media screen and (min-width: 1200px) {
   .modal-form__input {
     @include bordered(1px, $modal-input-color);
-
     margin-top: 4px;
     width: 100%;
     height: 40px;

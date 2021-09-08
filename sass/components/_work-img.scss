@@ -23,9 +23,6 @@
 
 .work-img__item {
   @include flex(flex, center, center);
-}
-
-.work-img__item {
   height: 70px;
   position: absolute;
   bottom: 0;

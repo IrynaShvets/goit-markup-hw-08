@@ -96,7 +96,6 @@ ul {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid red;
 }
 
 @media screen and (min-width: 480px) {
@@ -194,6 +193,10 @@ ul {
   overflow-y: scroll;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
 @media screen and (max-width: 767px) {
@@ -223,10 +226,6 @@ ul {
           animation: mobileWindow 500ms ease;
 }
 
-.header-container {
-  position: relative;
-}
-
 .header-nav__navbar,
 .header-contacts {
   display: none;
@@ -246,8 +245,8 @@ ul {
 @media screen and (max-width: 767px) {
   .menu-toggle {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -7px;
+    right: 8px;
     min-height: 40px;
     min-width: 40px;
     display: -webkit-inline-box;
@@ -271,7 +270,14 @@ ul {
   }
   .menu-toggle .menu-toggle__icon {
     fill: currentColor;
+    -webkit-transition: fill 2500ms ease-in-out;
+    transition: fill 2500ms ease-in-out;
   }
+}
+
+.js-close-menu {
+  top: 10px;
+  right: 9px;
 }
 
 .menu-toggle.is-open .menu-toggle__icon-close {
@@ -294,9 +300,6 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.contacts__menu-container {
   margin-bottom: 64px;
 }
 
@@ -382,12 +385,6 @@ ul {
   color: #2196f3;
 }
 
-.header-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 @media screen and (min-width: 768px) {
   .menu-toggle,
   .menu {
@@ -403,7 +400,8 @@ ul {
   .header {
     width: 100%;
     height: 60px;
-    padding: 16px 15px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -411,6 +409,10 @@ ul {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+}
+
+.container--centered {
+  position: relative;
 }
 
 @media screen and (min-width: 1200px) {
@@ -442,6 +444,12 @@ ul {
   .container--centered {
     width: 480px;
   }
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media screen and (max-width: 767px) {
@@ -496,14 +504,6 @@ ul {
 
 @media screen and (min-width: 768px) {
   .header-nav__link {
-    position: relative;
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .header-nav__link {
     padding-top: 32px;
     padding-bottom: 32px;
     font-family: Roboto, sans-serif;
@@ -515,6 +515,8 @@ ul {
     font-style: normal;
     text-decoration: none;
     position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
     display: block;
     -webkit-transition-property: color;
     transition-property: color;
@@ -719,20 +721,7 @@ ul {
   }
 }
 
-/*@keyframes mobileClose {
-  100% {
-    transform: scale(0);
-    transform-origin: top left;
-  }
-
-  0% {
-    transform: scale(1);
-    transform-origin: top left;
-  }
-}*/
 .hero {
-  margin-left: auto;
-  margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -740,55 +729,25 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
+  max-width: 1600px;
+  height: 400px;
+  text-align: center;
   border: 1px solid #757575;
   background-color: #2f303a;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-position: center;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-@media screen and (min-width: 480px) {
-  .hero {
-    width: 480px;
-    width: 100%;
-    min-width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero {
-    width: 768px;
-    width: 100%;
-    max-width: 1199px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 1200px;
-    width: 100%;
-    max-width: 1600px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .hero {
-    height: 400px;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), color-stop(rgba(0, 0, 0, 0.2)), to(rgba(47, 48, 58, 0.4))), url(../images/mobile-hero1x.jpg);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(47, 48, 58, 0.4)), url(../images/mobile-hero1x.jpg);
-    background-size: 480px 400px;
-  }
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), color-stop(rgba(0, 0, 0, 0.2)), to(rgba(47, 48, 58, 0.4))), url(../images/mobile-hero1x.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(47, 48, 58, 0.4)), url(../images/mobile-hero1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @media screen and (max-width: 767px), (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -800,11 +759,8 @@ ul {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero {
-    max-width: 1199px;
-    height: 400px;
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), color-stop(rgba(0, 0, 0, 0.2)), to(rgba(47, 48, 58, 0.4))), url(../images/tablet-hero1x.jpg);
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(47, 48, 58, 0.4)), url(../images/tablet-hero1x.jpg);
-    background-size: 768px 400px;
   }
 }
 
@@ -817,7 +773,6 @@ ul {
 
 @media screen and (min-width: 1200px) {
   .hero {
-    max-width: 1600px;
     height: 600px;
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), color-stop(rgba(0, 0, 0, 0.2)), to(rgba(47, 48, 58, 0.4))), url(../images/desktop-hero1x.jpg);
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(47, 48, 58, 0.4)), url(../images/desktop-hero1x.jpg);
@@ -1043,9 +998,6 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.work-img__item {
   height: 70px;
   position: absolute;
   bottom: 0;
@@ -1841,9 +1793,6 @@ ul {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal__icon-close {
   fill: currentColor;
 }
 
